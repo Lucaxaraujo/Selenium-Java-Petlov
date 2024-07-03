@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-class Cadastro {
+class SignupSelenium {
 
 	WebDriver driver;
 
@@ -53,6 +53,9 @@ class Cadastro {
 
 		WebElement zipcode = driver.findElement(By.cssSelector("input[name='cep']"));
 		zipcode.sendKeys("12070740");
+
+		WebElement cepButton = driver.findElement(By.cssSelector("input[value='Buscar CEP']"));
+		cepButton.click();
 
 		WebElement addressNumber = driver.findElement(By.cssSelector("input[name='addressNumber']"));
 		addressNumber.sendKeys("50");
